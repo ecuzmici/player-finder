@@ -1,10 +1,10 @@
 import { shallowMount } from "@vue/test-utils";
-import HelloWorld from "@/components/HelloWorld.vue";
+import ModalBox from "../../src/components/ModalBox.vue"
 
 describe("HelloWorld.vue", () => {
-  it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
+  it("renders confirming message", () => {
+    const msg = "Are you sure you want to choose";
+    const wrapper = shallowMount(ModalBox, {
       props: { msg },
     });
     expect(wrapper.text()).toMatch(msg);
